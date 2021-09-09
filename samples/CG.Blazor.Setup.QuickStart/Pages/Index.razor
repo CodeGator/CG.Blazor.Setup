@@ -1,0 +1,38 @@
+﻿@page "/"
+
+<MudText Typo="Typo.h4">CG.Blazor.Setup Demo</MudText>
+<MudText Typo="Typo.body1">This application demonstates some of the capabilities of the library.</MudText>
+
+<div class="container">
+    <MudText Class="pt-5" Typo="Typo.h6">Capabilities</MudText>
+    <ul style="list-style-type:square">
+        <li>CG.Blazor.Setup is open-source, free to use, fast and reliable.</li>
+        <li>CG.Blazor.Setup is written in <strong>C#</strong>, <strong>ASP.NET</strong> and <strong>Blazor</strong>.</li>
+        <li>CG.Blazor.Setup leverages <strong>CODEGATOR</strong> packages, for a proven, standards driven architecture.</li>
+        <li>CG.Blazor.Setup is built on top of <strong>.NET 5.x</strong>, so it runs on multiple operating systems, without fuss.</li>
+        <li>CG.Blazor.Setup users are 15.38% less likely to develop hard water stains in their shower. <small>(Ok, we made that one up)</small></li>
+    </ul>
+</div>
+
+<div class="pt-5">
+    <pre>@JSON</pre>
+</div>
+
+@code {
+    [Inject]
+    SetupVM SetupVM { get; set; }
+
+    protected string JSON { get; set; }
+
+    protected override void OnInitialized()
+    {
+        JSON = JsonSerializer.Serialize(
+            SetupVM,
+            new JsonSerializerOptions()
+            {
+                WriteIndented = true
+            });
+
+        base.OnInitialized();
+    }
+}

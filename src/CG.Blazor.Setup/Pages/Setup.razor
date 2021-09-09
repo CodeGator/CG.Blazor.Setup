@@ -1,0 +1,19 @@
+﻿@page "/setup"
+
+<div class="setup-wrapper">
+    <div class="container" style="max-width: 640px;">
+        @if (false == string.IsNullOrEmpty(Error))
+        {
+            <p class="pb-2 px-8 alert alert-danger" role="alert">@Error</p>
+        }
+
+        @if (false == string.IsNullOrEmpty(Information))
+        {
+            <pre class="pb-2 px-8 alert alert-success" role="alert">@Information</pre>
+        }
+        <DynamicForm Model="@Model" 
+                     OnValidSubmit="OnValidSubmit" />
+    </div>
+</div>
+
+

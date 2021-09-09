@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+	<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<Authors>Martin Cook</Authors>
+	<Company>CodeGator</Company>
+	<Description>The package contains a Blazor plugin for editing the setup of a website.
+
+Platforms supported:
+      .NET 5.x or above</Description>
+	<Copyright>Copyright © 2020 - 2021 by CodeGator. All rights reserved.</Copyright>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/CodeGator/CG.Blazor.Setup</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/CodeGator/CG.Blazor.Setup</RepositoryUrl>
+	<RepositoryType>GIT</RepositoryType>
+	<PackageIcon>packageDefaultIcon-50x50.png</PackageIcon>
+	<PackageIconUrl />
+	<PackageTags>setup, blazor, plugins, CG.Blazor.Setup, CodeGator</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\net5.0\CG.Blazor.Setup.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Setup2.razor" />
+    <Content Remove="wwwroot\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components.old\**" />
+    <Content Remove="Components.old\**" />
+    <EmbeddedResource Remove="Components.old\**" />
+    <None Remove="Components.old\**" />
+    <None Include="..\..\packageDefaultIcon-50x50.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\Setup2.razor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CG.Alerts" Version="2021.4.4" />
+	  <PackageReference Include="CG.Blazor.Forms" Version="2021.2.6" />
+	  <PackageReference Include="CG.Blazor.Plugins" Version="2021.1.5" />
+	  <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.0-preview.6.21355.2" />
+	  <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.231">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Properties\" />
+	  <Folder Include="Pages\Shared\" />
+	</ItemGroup>
+
+</Project>
