@@ -1,9 +1,9 @@
 # CG.Blazor.Setup: 
 ---
-[![Build Status](https://dev.azure.com/codegator/CG.Blazor.Setup/_apis/build/status/CodeGator.CG.Blazor.Setup?branchName=main)](https://dev.azure.com/codegator/CG.Blazor.Setup/_build/latest?definitionId=25&branchName=main)
+[![Build Status](https://dev.azure.com/codegator/CG.Blazor.Setup/_apis/build/status/CodeGator.CG.Blazor.Setup?branchName=main)](https://dev.azure.com/codegator/CG.Blazor.Setup/_build/latest?definitionId=77&branchName=main)
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.Blazor.Setup/index.html)
 [![NuGet downloads](https://img.shields.io/nuget/dt/CG.Blazor.Setup.svg?style=flat)](https://nuget.org/packages/CG.Blazor.Setup)
-![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Blazor.Setup/25)
+![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Blazor.Setup/77)
 [![Github discussion](https://img.shields.io/badge/Discussion-online-blue)](https://github.com/CodeGator/CG.Blazor.Setup/discussions)
 [![CG.Blazor.Setup on fuget.org](https://www.fuget.org/packages/CG.Blazor.Setup/badge.svg)](https://www.fuget.org/packages/CG.Blazor.Setup)
 
