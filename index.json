@@ -1,0 +1,57 @@
+{
+  "api/CG.Blazor.Setup.Alerts.html": {
+    "href": "api/CG.Blazor.Setup.Alerts.html",
+    "title": "Namespace CG.Blazor.Setup.Alerts",
+    "keywords": "Namespace CG.Blazor.Setup.Alerts Classes SetupChangedAlert This alert is raised whenever the setup is changed."
+  },
+  "api/CG.Blazor.Setup.Alerts.SetupChangedAlert.html": {
+    "href": "api/CG.Blazor.Setup.Alerts.SetupChangedAlert.html",
+    "title": "Class SetupChangedAlert",
+    "keywords": "Class SetupChangedAlert This alert is raised whenever the setup is changed. Inheritance System.Object CG.Events.Models.EventBase CG.Alerts.AlertEventBase SetupChangedAlert Inherited Members CG.Events.Models.EventBase._subscriptions CG.Events.Models.EventBase._sync CG.Events.Models.EventBase.Publish(System.Object[]) CG.Events.Models.EventBase.PublishAsync(System.Object[]) CG.Events.Models.EventBase.Subscribe(System.Action<System.Object[]>, System.Boolean) CG.Events.Models.EventBase.Subscribe(System.Boolean) CG.Events.Models.EventBase.Unsubscribe(System.IDisposable) System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Blazor.Setup.Alerts Assembly : CG.Blazor.Setup.dll Syntax public class SetupChangedAlert : AlertEventBase Properties TokenSource This property contains a reference to a shared token source. Declaration public static CancellationTokenSource TokenSource { get; set; } Property Value Type Description System.Threading.CancellationTokenSource Methods OnInvoke(Object[]) This method is called whenever the alert is raised. Declaration protected override void OnInvoke(params object[] args) Parameters Type Name Description System.Object [] args The arguments for the alert. Overrides CG.Events.Models.EventBase.OnInvoke(System.Object[])"
+  },
+  "api/CG.Blazor.Setup.HostHelper.html": {
+    "href": "api/CG.Blazor.Setup.HostHelper.html",
+    "title": "Class HostHelper",
+    "keywords": "Class HostHelper This class utility contains methods that help with managing setup change operations, that typically require the host to be restarted. Inheritance System.Object HostHelper Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Blazor.Setup Assembly : CG.Blazor.Setup.dll Syntax public static class HostHelper Methods RunAsSetupObserverAsync(Func<IHostBuilder>, CancellationToken) This method calls the builderDelegate delegate to create a host builder, then it builds the host and runs while watching for setup change alerts. When an alert is observed, the method restarts the host - since the services all probably need to be re-created with the new setup configuration. Declaration public static async Task RunAsSetupObserverAsync(Func<IHostBuilder> builderDelegate, CancellationToken cancellationToken = default(CancellationToken)) Parameters Type Name Description System.Func < Microsoft.Extensions.Hosting.IHostBuilder > builderDelegate The delegate for building the host builder. System.Threading.CancellationToken cancellationToken A cancellation token. Returns Type Description System.Threading.Tasks.Task A task to perform the operation."
+  },
+  "api/CG.Blazor.Setup.html": {
+    "href": "api/CG.Blazor.Setup.html",
+    "title": "Namespace CG.Blazor.Setup",
+    "keywords": "Namespace CG.Blazor.Setup Classes HostHelper This class utility contains methods that help with managing setup change operations, that typically require the host to be restarted. Module This class represents the plugin module's startup logic."
+  },
+  "api/CG.Blazor.Setup.Module.html": {
+    "href": "api/CG.Blazor.Setup.Module.html",
+    "title": "Class Module",
+    "keywords": "Class Module This class represents the plugin module's startup logic. Inheritance System.Object CG.Blazor.Plugins.ModuleBase Module Implements CG.Blazor.Plugins.IModule Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Blazor.Setup Assembly : CG.Blazor.Setup.dll Syntax public class Module : ModuleBase, IModule Methods Configure(IApplicationBuilder, IWebHostEnvironment) Declaration public override void Configure(IApplicationBuilder app, IWebHostEnvironment env) Parameters Type Name Description Microsoft.AspNetCore.Builder.IApplicationBuilder app Microsoft.AspNetCore.Hosting.IWebHostEnvironment env Overrides CG.Blazor.Plugins.ModuleBase.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment) ConfigureServices(IServiceCollection, IConfiguration) Declaration public override void ConfigureServices(IServiceCollection serviceCollection, IConfiguration configuration) Parameters Type Name Description Microsoft.Extensions.DependencyInjection.IServiceCollection serviceCollection Microsoft.Extensions.Configuration.IConfiguration configuration Overrides CG.Blazor.Plugins.ModuleBase.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration) Implements CG.Blazor.Plugins.IModule"
+  },
+  "api/CG.Blazor.Setup.Options.html": {
+    "href": "api/CG.Blazor.Setup.Options.html",
+    "title": "Namespace CG.Blazor.Setup.Options",
+    "keywords": "Namespace CG.Blazor.Setup.Options Classes PluginOptions This class contains configuration settings related to the setup plugin."
+  },
+  "api/CG.Blazor.Setup.Options.PluginOptions.html": {
+    "href": "api/CG.Blazor.Setup.Options.PluginOptions.html",
+    "title": "Class PluginOptions",
+    "keywords": "Class PluginOptions This class contains configuration settings related to the setup plugin. Inheritance System.Object CG.DataAnnotations.ValidatableObject CG.Options.OptionsBase PluginOptions Implements System.ComponentModel.DataAnnotations.IValidatableObject Inherited Members CG.DataAnnotations.ValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext) System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Blazor.Setup.Options Assembly : CG.Blazor.Setup.dll Syntax public class PluginOptions : OptionsBase, IValidatableObject Constructors PluginOptions() This constructor creates a new instance of the PluginOptions class. Declaration public PluginOptions() Properties ModelType This property indicates which type to use for the model. Declaration public string ModelType { get; set; } Property Value Type Description System.String RedirectPages This property indicates whether the plugin should force the setup page to display if there is no appsetup.json file. Declaration public bool RedirectPages { get; set; } Property Value Type Description System.Boolean Implements System.ComponentModel.DataAnnotations.IValidatableObject"
+  },
+  "api/CG.Blazor.Setup.Pages.html": {
+    "href": "api/CG.Blazor.Setup.Pages.html",
+    "title": "Namespace CG.Blazor.Setup.Pages",
+    "keywords": "Namespace CG.Blazor.Setup.Pages Classes Setup This class is the code-behind for the Setup razor page."
+  },
+  "api/CG.Blazor.Setup.Pages.Setup.html": {
+    "href": "api/CG.Blazor.Setup.Pages.Setup.html",
+    "title": "Class Setup",
+    "keywords": "Class Setup This class is the code-behind for the Setup razor page. Inheritance System.Object Setup Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : CG.Blazor.Setup.Pages Assembly : CG.Blazor.Setup.dll Syntax public class Setup Properties AlertService This property contains a reference to an alert service. Declaration [Inject] protected IAlertService AlertService { get; set; } Property Value Type Description CG.Alerts.IAlertService DataProtectionProvider This property contains a reference to a data protector. Declaration [Inject] protected IDataProtectionProvider DataProtectionProvider { get; set; } Property Value Type Description Microsoft.AspNetCore.DataProtection.IDataProtectionProvider Error This property contains error information for the UI. Declaration protected string Error { get; set; } Property Value Type Description System.String Information This property contains information for the UI. Declaration protected string Information { get; set; } Property Value Type Description System.String Logger This property contains a reference to the logger for the page. Declaration [Inject] protected ILogger<Setup> Logger { get; set; } Property Value Type Description Microsoft.Extensions.Logging.ILogger < Setup > Model This property contains a reference to the model. Declaration protected object Model { get; set; } Property Value Type Description System.Object PluginOptions This property contains a reference to the plugin options. Declaration [Inject] protected IOptions<PluginOptions> PluginOptions { get; set; } Property Value Type Description Microsoft.Extensions.Options.IOptions < PluginOptions > ServiceProvider This property contains a reference to a service provider. Declaration [Inject] protected IServiceProvider ServiceProvider { get; set; } Property Value Type Description System.IServiceProvider Methods OnInitialized() This method is called to initialize the component. Declaration protected override void OnInitialized() OnValidSubmit(EditContext) This method is called by the edit form when the user submits valid data. Declaration protected async Task OnValidSubmit(EditContext editContext) Parameters Type Name Description Microsoft.AspNetCore.Components.Forms.EditContext editContext The edit content to use for the operation. Returns Type Description System.Threading.Tasks.Task"
+  },
+  "articles/intro.html": {
+    "href": "articles/intro.html",
+    "title": "Add your introductions here!",
+    "keywords": "Add your introductions here!"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Introduction",
+    "keywords": "Introduction CG.Blazor.Setup.dll contains a Blazor plugin for editing the setup of a website."
+  }
+}
