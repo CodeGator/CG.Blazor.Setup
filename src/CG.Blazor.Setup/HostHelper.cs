@@ -40,13 +40,13 @@ namespace CG.Blazor.Setup
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builderDelegate, nameof(builderDelegate));
 
-            // We'll be notified whenver the setup is changed via the alert service,
+            // We'll be notified whenever the setup is changed via the alert service,
             //   which will handle cancelling a token for us. We'll link to that token
-            //   here so we can loop and restart the host if a setup change occured, or,
+            //   here so we can loop and restart the host if a setup change occures, or,
             //   we can exit normally if the host itself exited.
 
-            // Loop until the setup token is cancelled.
-            while (false == SetupChangedAlert.TokenSource.IsCancellationRequested)
+            // Loop until the token is cancelled.
+            while (false == cancellationToken.IsCancellationRequested)
             {
                 // Create a linked token, which is what the host will use.
                 var hostToken = CancellationTokenSource.CreateLinkedTokenSource(

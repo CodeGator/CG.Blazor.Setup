@@ -1,0 +1,13 @@
+{
+  "Database": {
+    "Selected": "SqlServer",
+    "SqlServer": {
+      "ConnectionString": "Server=.;Database=CG.Blazor.Setup.QuickStart;Trusted_Connection=True;",
+      "CommandTimeout": 30,
+      "RetryPattern": "None"
+    },
+    "Mongo": {
+      "ConnectionString": "mongodb://localhost:27017"
+    }
+  }
+}
