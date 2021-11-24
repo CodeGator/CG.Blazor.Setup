@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 	<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,8 +11,8 @@
 	<Description>The package contains a Blazor plugin for editing the setup of a website.
 
 Platforms supported:
-      .NET 5.x or above</Description>
-	<Copyright>Copyright © 2020 - 2021 by CodeGator. All rights reserved.</Copyright>
+      .NET 6.x or above</Description>
+	<Copyright>Copyright © 2020 - 2022 by CodeGator. All rights reserved.</Copyright>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/CodeGator/CG.Blazor.Setup</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/CodeGator/CG.Blazor.Setup</RepositoryUrl>
@@ -23,7 +23,7 @@ Platforms supported:
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\net5.0\CG.Blazor.Setup.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net6.0\CG.Blazor.Setup.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -59,11 +59,11 @@ Platforms supported:
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CG.Alerts" Version="2021.4.6" />
-	  <PackageReference Include="CG.Blazor.Forms" Version="2021.2.7" />
-	  <PackageReference Include="CG.Blazor.Plugins" Version="2021.1.6" />
-	  <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.0-preview.6.21355.2" />
-	  <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.231">
+	  <PackageReference Include="CG.Alerts" Version="2022.1.1" />
+	  <PackageReference Include="CG.Blazor.Forms" Version="2022.1.1" />
+	  <PackageReference Include="CG.Blazor.Plugins" Version="2022.1.1" />
+	  <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.0" />
+	  <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.244">
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>

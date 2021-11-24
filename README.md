@@ -16,7 +16,7 @@ The package contains a Blazor plugin for editing the setup of a website.
 * CG.Blazor.Setup.Options.PluginOptions
 
 #### What platform(s) does it support?
-* .NET 5.x or higher
+* .NET 6.x or higher
 
 #### How do I install it?
 The binary is hosted on [NuGet](https://www.nuget.org/packages/CG.Blazor.Setup/). To install the package using the NuGet package manager:
